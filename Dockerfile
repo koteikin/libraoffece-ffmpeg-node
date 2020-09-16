@@ -8,4 +8,6 @@ RUN apk add --repository https://alpine.global.ssl.fastly.net/alpine/edge/commun
     && pip install unoconv \
     && rm -rf /var/cache/apk/* /tmp/*
 
+RUN sed -i 's|rights="none" pattern="PDF"||' /etc/ImageMagick-7/policy.xml
+
 RUN adduser -h /home/node -s /sbin/nologin -u 1000 -D node
