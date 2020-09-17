@@ -1,5 +1,5 @@
 ### Docker image
-- nodejs 12
+- nodejs 8
 - libreoffice
 - imagemagik
 - ffmpeg
