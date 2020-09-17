@@ -2,7 +2,7 @@ FROM debian:buster-slim
 LABEL maintainer "Yevhen Kizin <y.kizin@kitsoft.kiev.ua>"
 
 RUN apt-get update \
-    && apt-get install python-software-properties curl \
+    && apt-get install curl \
     && add-apt-repository ppa:libreoffice/ppa \
     && curl -sL https://deb.nodesource.com/setup_lts.x | bash - \
     && apt-get update \
