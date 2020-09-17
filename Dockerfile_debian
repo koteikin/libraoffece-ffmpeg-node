@@ -1,0 +1,12 @@
+FROM debian:buster-slim
+LABEL maintainer "Yevhen Kizin <y.kizin@kitsoft.kiev.ua>"
+
+RUN apt-get update \
+    && apt-get install python-software-properties curl \
+    && add-apt-repository ppa:libreoffice/ppa \
+    && curl -sL https://deb.nodesource.com/setup_lts.x | bash - \
+    && apt-get update \
+    && apt-get install libreoffice-draw libreoffice-writer libreoffice-calc libreoffice-impress \
+    && apt-get install imagemagick ffmpeg curl ghostscript unoconv build-essential python-dev nodejs npm
+
+RUN sed -i 's|rights="none" pattern="PDF"||' /etc/ImageMagick-6/policy.xml
