@@ -3,7 +3,7 @@
 
  RUN apt update \
      && apt-get install -y software-properties-common curl \
-     && curl -sL https://deb.nodesource.com/setup_lts.x | bash - \
+     && curl -sL https://deb.nodesource.com/setup_8.x | bash - \
      && add-apt-repository ppa:jonathonf/ffmpeg-4 \
      && apt-get update \
      && apt-get install -y wget libreoffice-draw libreoffice-writer libreoffice-calc libreoffice-impress \
